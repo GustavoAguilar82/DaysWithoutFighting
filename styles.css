@@ -8,7 +8,7 @@ html, body{
   overflow-x: hidden !important;
 }
 body {
-  background-color: #f2f1ed;
+  background-color: #b2f1ed;
   color: #de4848;
   width: 100%;
   max-height: 1080px;
@@ -29,7 +29,7 @@ body {
   gap: .25em;
   justify-content: center;
   margin-top: 118px;
-  margin-left: 147px;
+  margin-left: 75px;
 }
 
 .counter-segment {
@@ -112,15 +112,361 @@ body {
 }
 
 
-
-
-
-.left-wall-section{
-  width: 294.85px;
-  background-color: aqua;
+.nightstand{
+  justify-content: center;  
+  z-index: 1;
 }
+
+.nightstand-top{
+  width: 100%;
+  height: 0px;
+  border-right: 40px solid transparent;
+  border-left: 40px solid transparent;
+  border-bottom: 100px solid #C19A6B;
+  display: flex;
+}
+
+.flowers-container{
+  width: 50px;
+  height: 50px;
+  margin-top: 45px;
+  border-radius: 50%;
+  background-color: #de4848;
+  margin-left: -23px;
+}
+
+.afrodita-container{
+  width: 30px;
+  height: 30px;
+  border-radius: 10%;
+  background-color:aqua;
+  margin-top: 15px;
+}
+
+.brujula-container{
+  width: 30px;
+  height: 30px;
+  border-radius: 10%;
+  background-color:aqua;
+  margin-top: 35px;
+}
+
+.foto-container-img{
+  width: 60px;
+  height: 40px;
+  border-radius: 2%;
+  background-color:aqua;
+}
+
+.areticos-container{  
+  width: 50px;
+  height: 50px;
+  border-radius: 10%;
+  background-color:aqua;}
+
+
+.nightstand-body{
+  width: 100%;
+  height: 75px;
+  display: flex;
+  background-color:#C19A6B;
+  align-items: center;
+  justify-content: center;
+  border: groove;
+  border-width: thin;
+}
+
+.nightstand-door{
+  width: 95%;
+  height: 80%;
+  display: flex;
+  background-color: #C19A6B;
+  align-items: center;
+  justify-content: center;
+  border: outset
+}
+.legs{
+  display: inline-flex;
+  width: 100%;
+  place-content: space-between
+}
+.nightstand-leg-l{
+  width: 20px;
+  height: 5px;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-top: 80px solid #C19A6B;
+  display: flex;
+  border-bottom: 15px; 
+}
+
+.nightstand-leg-r{
+    width: 20px;
+    height: 5px;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top: 80px solid #C19A6B;
+    display: flex;
+    border-bottom: 15px;    
+}
+
+img{
+  width: 14px;
+  height: 14px;
+}
+
+
+                            .left-wall-section{
+  width: 294.85px;
+  height: 100%;
+  background-color: #c2f1ed;
+}
+.curtain {
+  width: 100%; /* Ensures the component is the full screen width */
+  height: 200px;
+  overflow: hidden; /* Allows you to slide the panels outside the container without them showing */
+  border: 3px solid #555;
+  transform: rotate(342deg) skew(342deg, 324deg);
+  display: inline-block;
+  margin: 32px 0px;
+}
+
+.curtain__wrapper {
+  /*These make sure the curtain covers the whole container*/
+  width: 100%;
+  height: 100%;
+}
+
+.curtain__panel {
+  /*These sets a background color as well as an img to make it look like an actual curtain*/
+  background: #8b0000;
+  background-image: url("https://images.vexels.com/media/users/17482/101168/preview2/01bdac45c37aff22f75230abf3f019d4-red-curtain-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%; /* Each panel takes up half the container */
+  height: 100vh; /* Used for demo purposes */
+  float: left; /* Makes sure panels are side-by-side */
+  position: relative; /* Needed to define the z-index */
+  z-index: 2; /* Places the panels in front of the prize */
+  transition: all 1s ease-out; /* Animates the sliding transition */
+}
+
+.curtain__panel--left {
+  /* Slides the panel to the left out of the container */
+  transform: translateX(-90%);
+}
+
+.curtain__panel--right {
+  /* Slides the panel to the right out of the container */
+  transform: translateX(90%);
+}
+
+.curtain__prize {
+  /*This sets the background color and an image (purposesly small to not take up the whole background).  The image is centered and not repeated so that it looks like an img element was used, but is not*/
+  background: #333;
+  background-image: url("https://i.imgur.com/Y5QqJvA.png");
+  background-repeat: no-repeat;
+  
+  background-position: center;
+  position: absolute; /* Forces the prize position into the container start */
+  z-index: 1; /* Places the prize behind the panels, which are z-index 2 */
+  width: 170px; /*Makes sure that it fills the whole container*/
+  height: 195px;
+}
+input[type="checkbox"] {
+  position: absolute; /* Force the checkbox at the start of the container */
+  cursor: pointer; /* Indicate the curtain is clickable */
+  width: 100%; /* The checkbox is as wide as the component */
+  height: 100%; /* The checkbox is as tall as the component */
+  z-index: 100; /* Make sure the checkbox is on top of everything else */
+  opacity: 0; /* Hide the checkbox */
+}
+
+/* When the checkbox is checked... */
+/* Slide the first panel in */
+input[type="checkbox"]:checked ~ div.curtain__panel--left {
+  transform: translateX(0);
+}
+
+/* Slide the second panel in */
+input[type="checkbox"]:checked ~ div.curtain__panel--right {
+  transform: translateX(0);
+}
+
+
 
 .rigth-bed-section{
   width: 294.85px;
-  background-color:bisque ;
+  background-color:#c2f1ed;}
+.bed{
+  margin-top: 180px;
 }
+.bed_body{
+  background-color: #87CEFA;
+  height: 209px;
+  width: 240px;
+  transform: rotate(17deg) skew(39deg, 344deg);
+}
+.bed-side{
+  background-color: #69b9eb;
+  height: 209px;
+  width: 20px;
+}
+.legs_bed{  
+  display: inline-flex;
+  width: 100%;
+  place-content: space-between;
+}
+
+.leg_l{
+  height: 50px;
+  width: 10px;
+  background-color: #654321;
+  margin-left: -40px;
+  margin-top: -68px;
+  position: absolute;
+} 
+.leg_r{
+  height: 50px;
+  width: 10px;
+  background-color: #654321;
+  margin-left: 178px;
+  margin-top: -68px;
+  position: absolute;
+} 
+
+
+.Moi{
+  margin-top: -29px;
+  margin-left: 95px;
+}
+.moi_img{
+  width: 60px;
+  height: 80px;
+  position: relative;
+  z-index: initial;
+}
+
+
+
+.container_pillow {
+  margin: auto;
+  width: 50px;
+  height: 30px;
+  margin-top: -220px;
+}
+
+.pillowcase {
+  position: absolute;
+  background: #f1f0ea;
+}
+  .full {
+    width: 50px;
+    height: 30px;
+    border-radius: 50% 50% 50% 50% / 10% 10% 10% 10%;
+    -webkit-transform: skew(5deg) rotate(-5deg);
+    -ms-transform: skew(5deg) rotate(-5deg);
+    transform: skew(5deg) rotate(-5deg);}
+.side {
+  position: absolute;
+  width: 10px;
+  height: 8px;
+  border-radius: 50% 100%;
+  -webkit-transform: skew(5deg);
+  -ms-transform: skew(5deg);
+  transform: skew(5deg);
+  } .top-left {
+  left: -5px;
+    background: #f1f0ea;
+  }
+  .top-right {
+    top: -3px;
+    left: 41px;
+    background: #f1f0ea;
+    border-radius: 100% 50%;
+  }
+  .bottom-left {
+    top: 25px;
+    left: -4px;
+    background: #f1f0ea;
+    border-radius: 100% 50%;
+  }
+  .bottom-right {
+    top: 20px;
+    left: 44px;
+    background: #f1f0ea;
+    border-radius: 50% 100%;
+  }
+
+
+  .cobija {
+    width: 100%; /* Ensures the component is the full screen width */
+    height: 130px;
+    overflow: hidden; /* Allows you to slide the panels outside the container without them showing */
+    /*transform: rotate(82deg) skew(343deg, 336deg);*/
+    display: inline-block;
+    margin: -40px 0px;
+  }
+  
+  .cobija__wrapper {
+    /*These make sure the curtain covers the whole container*/
+    width: 100%;
+    height: 100%;
+  }
+  
+  .cobija__panel {
+    /*These sets a background color as well as an img to make it look like an actual curtain*/
+    background: #8b0000;
+    background-image: url("https://i.imgur.com/NmJTi5o.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%; /* Each panel takes up half the container */
+    height: 100%; /* Used for demo purposes */
+    float: left; /* Makes sure panels are side-by-side */
+    position: relative; /* Needed to define the z-index */
+    z-index: 2; /* Places the panels in front of the prize */
+    transition: all 1s ease-out; /* Animates the sliding transition */
+  }
+  
+  
+  .cobija__panel--right {
+    /* Slides the panel to the right out of the container */
+    transform: translateY(90%);
+  }
+  
+  .cobija__prize {
+    /*This sets the background color and an image (purposesly small to not take up the whole background).  The image is centered and not repeated so that it looks like an img element was used, but is not*/
+    background: transparent;
+    position: absolute; /* Forces the prize position into the container start */
+    z-index: 1; /* Places the prize behind the panels, which are z-index 2 */
+    width: 170px; /*Makes sure that it fills the whole container*/
+    height: 128px;
+  }
+  input[type="checkbox"] {
+    position: absolute; /* Force the checkbox at the start of the container */
+    cursor: pointer; /* Indicate the curtain is clickable */
+    width: 100%; /* The checkbox is as wide as the component */
+    height: 128px; /* The checkbox is as tall as the component */
+    z-index: 100; /* Make sure the checkbox is on top of everything else */
+    opacity: 0; /* Hide the checkbox */
+  }
+  
+  /* When the checkbox is checked... */
+  
+  /* Slide the second panel in */
+  input[type="checkbox"]:checked ~ div.cobija__panel--right {
+    transform: translateX(0);
+  }
+  input[type="checkbox"]:checked ~ div.triangle--down {
+    transform: translateX(0);
+  }
+
+  .triangle{
+    width: 0px;
+    height: 0;
+    z-index: 3;
+    border-top: 36px solid #69b9eb;
+    border-right: 21px solid transparent;
+    float: left; /* Makes sure panels are side-by-side */
+    position: fixed; /* Needed to define the z-index */
+  }

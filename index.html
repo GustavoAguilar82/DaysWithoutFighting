@@ -6,10 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Días sin pelear</title>
   <link rel="stylesheet" href="styles.css">
+  <link type="image/png" sizes="16x16" rel="icon" href="icons8-heart-keyhole-16.png">
   <script src="script.js" defer></script>
 </head>
 <body onload="window.scrollTo(0,1)">
-  <di class="left-wall-section"></di>
+  <di class="left-wall-section">
+        <!-- The main container -->
+    <div class="curtain">     
+      <!-- The container that wraps the curtain -->
+      <div class="curtain__wrapper">    
+        <!-- The checkbox hack! -->
+        <input type="checkbox" checked> 
+        <!-- The left curtain panel -->
+        <div class="curtain__panel curtain__panel--left">
+        </div> <!-- curtain__panel -->  
+        <!-- The prize behind the curtain panels -->
+        <div class="curtain__prize">
+        </div> <!-- curtain__prize -->   
+        <!-- The right curtain panel -->
+        <div class="curtain__panel curtain__panel--right">      
+        </div> <!-- curtain__panel -->    
+      </div> <!-- curtain__container -->
+    </div> <!-- main container -->
+  </di>
 
   <div class="container">
     <div class="counter">
@@ -53,9 +72,68 @@
         </div>
       </div>
     </div>
+    <div class="nightstand">
+      <div class="nightstand-top">
+        <div class="flowers-container"></div>
+        <div class="afrodita-container"></div>
+        <div class="brujula-container"></div>
+        <div class="foto-container-img"></div>
+        <div class="areticos-container"></div>
+      </div>
+      <div class="nightstand-body">
+        <div class="nightstand-door">
+            <img src="icons8-heart-keyhole-16.png" alt="Cargando imagen...">
+        </div>
+      </div>
+      <div class="legs">
+        <div class="nightstand-leg-l"></div>
+        <div class="nightstand-leg-r"></div>
+      </div>  
+    </div>
   </div>
+  
 
-
-  <di class="rigth-bed-section"></di>
+  <di class="rigth-bed-section">
+    <div class="bed">
+      <div class=" bed_legs">
+        <div class="leg_l"></div>
+        <div class="leg_r"></div>
+      </div>
+      <div class="bed_body">
+        <div class="bed-side"></div>
+        <div class="container_pillow">
+          <div class="pillow">
+            <div class="pillowcase">
+              <div class="pillowcase full"></div>
+            </div>
+            <div class="side">
+              <div class="side top-left"></div>
+              <div class="side top-right"></div>
+              <div class="side bottom-left"></div>
+              <div class="side bottom-right"></div>
+            </div>
+          </div>
+        </div>
+        <div class="Moi">
+          <img src="https://i.imgur.com/ceYrQks.png" alt="Cargando imagen..." class="moi_img">
+        </div>
+        <div class="cobija">
+    
+          <!-- The container that wraps the curtain -->
+          <div class="cobija__wrapper">
+            <div class="triangle triangle--down"></div>     
+            <!-- The checkbox hack! -->
+            <input type="checkbox" checked> 
+            <!-- The prize behind the curtain panels -->
+            <div class="cobija__prize">
+            </div> <!-- curtain__prize -->   
+            <!-- The right curtain panel -->
+            <div class="cobija__panel cobija__panel--right">      
+            </div> <!-- curtain__panel -->    
+          </div> <!-- curtain__container -->
+        </div> <!-- main container -->
+      </div>
+    </div>
+  </di>
 </body>
 </html>
