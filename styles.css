@@ -1,3 +1,5 @@
+@use postcss-preset-env;
+
 *, *::after, *::before {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
@@ -9,11 +11,10 @@ html, body{
 }
 body {
   background-color: #b2f1ed;
-  color: #de4848;
-  width: 100%;
+  color: #654321;
+  font-weight: bolder;
   max-height: 1080px;
   display: inline-flex;
-
 }
 
 
@@ -23,13 +24,37 @@ body {
   justify-content: center;
   flex-direction: column;
   width: 324.3px;
+  align-items: center;
 }
 .counter {
+  width: 280px;
+  height: 60px;
+  margin-bottom: 60px;
   display: flex;
-  gap: .25em;
+  gap: 0.25em;
+  margin-top: 9px;
+  align-items: center;
   justify-content: center;
-  margin-top: 118px;
-  margin-left: 75px;
+  background-image: url(https://i.imgur.com/zL6fgzC.png);
+  background-size: cover;  
+}
+
+.diasSinPelear_number{
+  text-align: center;
+  background-color: #f7f7f7;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+  border-radius: .1em;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.diasSinPelear_Container{
+  width: 125px;
+  height: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -4px;
 }
 
 .counter-segment {
@@ -37,6 +62,7 @@ body {
   flex-direction: column;
   gap: .05em;
   align-items: center;
+  margin-top: -6px;
 }
 
 .segment {
@@ -112,6 +138,9 @@ body {
 }
 
 
+
+
+
 .nightstand{
   justify-content: center;  
   z-index: 1;
@@ -127,42 +156,78 @@ body {
 }
 
 .flowers-container{
-  width: 50px;
-  height: 50px;
-  margin-top: 45px;
-  border-radius: 50%;
-  background-color: #de4848;
-  margin-left: -23px;
+  width: 48px;
+  height: 70px;
+  margin-top: 8px;
+  margin-left: -19px;
 }
+.flowers_img{
+  width: 48px;
+  height: 70px;
+  position: relative;
+  z-index: initial;
+}
+
 
 .afrodita-container{
   width: 30px;
   height: 30px;
-  border-radius: 10%;
-  background-color:aqua;
   margin-top: 15px;
 }
+.afrodita_img{
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: initial;
+}
+
 
 .brujula-container{
   width: 30px;
   height: 30px;
-  border-radius: 10%;
-  background-color:aqua;
   margin-top: 35px;
+}
+.brujula_img{
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: initial;
+}
+
+
+.db_img{
+  width: 36px;
+  height: 36px;
+  margin-top: 10px;
+  position: relative;
+  z-index: initial;
 }
 
 .foto-container-img{
   width: 60px;
-  height: 40px;
-  border-radius: 2%;
-  background-color:aqua;
+  height: 48px;
+  margin-top: -15px;;
+}
+.foto_img{
+  width: 62px;
+  height: 50px;
+  position: relative;
+  z-index: initial;
 }
 
-.areticos-container{  
-  width: 50px;
-  height: 50px;
-  border-radius: 10%;
-  background-color:aqua;}
+.libros-container{  
+  width: 60px;
+  height: 60px;
+  margin-top: 25px;
+}
+.libros_img{
+  width: 60px;
+  height: 60px;
+  position: relative;
+  z-index: initial;
+}
+
+
 
 
 .nightstand-body{
@@ -218,8 +283,8 @@ img{
 
                             .left-wall-section{
   width: 294.85px;
-  height: 100%;
-  background-color: #c2f1ed;
+  height: 412px;
+  background-color: #B2B1FE;
 }
 .curtain {
   width: 100%; /* Ensures the component is the full screen width */
@@ -239,7 +304,6 @@ img{
 
 .curtain__panel {
   /*These sets a background color as well as an img to make it look like an actual curtain*/
-  background: #8b0000;
   background-image: url("https://images.vexels.com/media/users/17482/101168/preview2/01bdac45c37aff22f75230abf3f019d4-red-curtain-background.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -262,15 +326,14 @@ img{
 }
 
 .curtain__prize {
-  /*This sets the background color and an image (purposesly small to not take up the whole background).  The image is centered and not repeated so that it looks like an img element was used, but is not*/
-  background: #333;
+
   background-image: url("https://i.imgur.com/Y5QqJvA.png");
   background-repeat: no-repeat;
-  
+  background-size: cover;
   background-position: center;
   position: absolute; /* Forces the prize position into the container start */
   z-index: 1; /* Places the prize behind the panels, which are z-index 2 */
-  width: 170px; /*Makes sure that it fills the whole container*/
+  width: 100%; /*Makes sure that it fills the whole container*/
   height: 195px;
 }
 input[type="checkbox"] {
@@ -297,9 +360,9 @@ input[type="checkbox"]:checked ~ div.curtain__panel--right {
 
 .rigth-bed-section{
   width: 294.85px;
-  background-color:#c2f1ed;}
+}
 .bed{
-  margin-top: 180px;
+  margin-top: 89px;
 }
 .bed_body{
   background-color: #87CEFA;
@@ -330,7 +393,7 @@ input[type="checkbox"]:checked ~ div.curtain__panel--right {
   height: 50px;
   width: 10px;
   background-color: #654321;
-  margin-left: 178px;
+  margin-left: 184px;
   margin-top: -68px;
   position: absolute;
 } 
@@ -347,13 +410,21 @@ input[type="checkbox"]:checked ~ div.curtain__panel--right {
   z-index: initial;
 }
 
-
+.astronauta-container{
+  margin-top: -29px;
+  margin-left: 40px;
+}
+.astronauta_img{  
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: initial;}
 
 .container_pillow {
   margin: auto;
   width: 50px;
   height: 30px;
-  margin-top: -220px;
+  margin-top: -194px;
 }
 
 .pillowcase {
@@ -398,14 +469,13 @@ input[type="checkbox"]:checked ~ div.curtain__panel--right {
     border-radius: 50% 100%;
   }
 
-
   .cobija {
     width: 100%; /* Ensures the component is the full screen width */
     height: 130px;
     overflow: hidden; /* Allows you to slide the panels outside the container without them showing */
     /*transform: rotate(82deg) skew(343deg, 336deg);*/
     display: inline-block;
-    margin: -40px 0px;
+    margin: -44px 0px;
   }
   
   .cobija__wrapper {
@@ -415,10 +485,7 @@ input[type="checkbox"]:checked ~ div.curtain__panel--right {
   }
   
   .cobija__panel {
-    /*These sets a background color as well as an img to make it look like an actual curtain*/
-    background: #8b0000;
     background-image: url("https://i.imgur.com/NmJTi5o.png");
-    background-repeat: no-repeat;
     background-size: cover;
     width: 100%; /* Each panel takes up half the container */
     height: 100%; /* Used for demo purposes */
@@ -428,15 +495,13 @@ input[type="checkbox"]:checked ~ div.curtain__panel--right {
     transition: all 1s ease-out; /* Animates the sliding transition */
   }
   
-  
   .cobija__panel--right {
     /* Slides the panel to the right out of the container */
     transform: translateY(90%);
   }
   
   .cobija__prize {
-    /*This sets the background color and an image (purposesly small to not take up the whole background).  The image is centered and not repeated so that it looks like an img element was used, but is not*/
-    background: transparent;
+     background: transparent;
     position: absolute; /* Forces the prize position into the container start */
     z-index: 1; /* Places the prize behind the panels, which are z-index 2 */
     width: 170px; /*Makes sure that it fills the whole container*/
@@ -451,9 +516,6 @@ input[type="checkbox"]:checked ~ div.curtain__panel--right {
     opacity: 0; /* Hide the checkbox */
   }
   
-  /* When the checkbox is checked... */
-  
-  /* Slide the second panel in */
   input[type="checkbox"]:checked ~ div.cobija__panel--right {
     transform: translateX(0);
   }
@@ -470,3 +532,155 @@ input[type="checkbox"]:checked ~ div.curtain__panel--right {
     float: left; /* Makes sure panels are side-by-side */
     position: fixed; /* Needed to define the z-index */
   }
+  .triangle_cobija{
+    width: 0px;
+    height: 0;
+    z-index: 3;
+    margin-top: 129px;
+    border-top: 21px solid #edf4d9;
+    border-right: 21px solid transparent;
+    float: left; /* Makes sure panels are side-by-side */
+    position: fixed; /* Needed to define the z-index */
+  }
+  .triangle_pared{
+    z-index: 3;
+    margin-top: 2px;
+    border-top: 143px solid transparent;
+    border-right: 90px solid #edf4d9;
+    margin-left: 200px;
+    position: fixed;
+  }
+  .floor{
+    height: 100px;
+    width: 340px;
+    background-color: #edf4d9;
+    z-index: -1;
+    position: fixed;
+    margin-top: 313px;
+  }
+  .floor_R{
+    height: 157px;
+    width: 290px;
+    background-color: #edf4d9;
+    position: fixed;
+    margin-top: 167px;
+    margin-left: -5px;
+  }
+
+  .wall_R{
+    border-top: 265px solid #B2B1FE;
+    border-right: 50px solid #B2B1FE;
+    border-bottom: 87px solid transparent;
+    margin-top: -98px;
+    margin-left: 236px;
+    position: fixed;
+    z-index: 0;
+  }
+
+
+
+
+
+
+.calendar_body {
+  display: grid;
+	font: 87.5%/0.5rem 'Lato', sans-serif;
+  place-items: center;
+  margin-right: 90px;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td {
+	padding: 0;
+}
+
+.calendar-container {
+	position: relative;
+	width: 80px;
+  align-items: center;
+}
+
+.calendar-container header {
+  border-radius: 1em 1em 0 0;
+  background: #e66b6b;
+  color: #fff;
+  padding: 3px 2px;
+  text-align: center;
+}
+
+.day {
+	font-size: 0.8em;
+	font-weight: 900;
+	line-height: 1em;
+}
+
+.month {
+	font-size: 0.8em;
+	line-height: 1em;
+  font-weight: 900;
+}
+
+.calendar {
+	background: #fff;
+	border-radius: 0 0 1em 1em;
+	-webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, .2), 0 3px 1px #fff;
+	box-shadow: 0 2px 1px rgba(0, 0, 0, .2), 0 3px 1px #fff;
+	color: #555;
+	display: inline-block;
+	padding: 5px;
+  width: 80px;
+}
+
+.calendar thead {
+	color: #e66b6b;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.calendar td {
+  text-align: center;
+  font-size: 0.4rem;
+  padding: 0px 1.6px;
+}
+
+.calendar tbody td:hover {
+	background: #cacaca;
+	color: #fff;
+}
+
+.current-day {
+	color: #e66b6b;
+}
+
+.prev-month,
+.next-month {
+	color: #cacaca;
+}
+
+.ring-left,
+.ring-right {
+	position: absolute;
+	top: 23px;
+}
+
+.ring-left { left: 1em; margin-left: -15px; }
+.ring-right { right: 1em; margin-right: -15px;}
+
+.ring-left:before,
+.ring-left:after,
+.ring-right:before,
+.ring-right:after {
+	background: #fff;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 3px 1px rgba(0, 0, 0, .3), 0 -1px 1px rgba(0, 0, 0, .2);
+	box-shadow: 0 3px 1px rgba(0, 0, 0, .3), 0 -1px 1px rgba(0, 0, 0, .2);
+	content: "";
+	display: inline-block;
+	margin: 4px;
+	height: 6px;
+	width: 2px;
+}

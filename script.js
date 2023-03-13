@@ -1,10 +1,18 @@
-const countToDate = new Date().setHours(new Date().getHours() + 24)
-let previousTimeBetweenDates
-setInterval(() => {
-  const currentDate = new Date()
-  const timeBetweenDates = Math.ceil((countToDate - currentDate) / 1000)
-  flipAllCards(timeBetweenDates)
+const firstDate = new Date("03/27/2022");
+let diferencia = new Date().getTime() - firstDate.getTime();
+let diasSinPelear = Math.ceil(diferencia /1000/60/60/24);
+document.getElementById("diasSinPelear_number").innerHTML = diasSinPelear;
 
+const tomorrow = new Date().setDate(new Date().getDate() + 1)
+const countToDate =  new Date(tomorrow).setHours(0,0,0,0)//contar hasta mañana
+
+console.log(new Date(countToDate));
+let previousTimeBetweenDates
+
+setInterval(() => {   //me cuenta los segundos
+  const currentDate = new Date(); //fecha actual
+  const timeBetweenDates = Math.ceil(new Date(countToDate - currentDate) /1000) //tiempo entre fechas en horas
+  flipAllCards(timeBetweenDates)
   previousTimeBetweenDates = timeBetweenDates
 }, 250)
 
